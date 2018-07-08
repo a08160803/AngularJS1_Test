@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="./index.js"></script>
+    <script src="./directive/myDirective.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="myController" class="container">
+        <my-directive></my-directive>
+        <my-directive2 control="nameControl"></my-directive2>
+
+        <h1 ng-show="showName">controller Hello, {{ customerName }}</h1>
+
+        <button ng-click="changeName()">更換名字</button>
+        <button ng-click="showCustomerName()">{{ showItOrNot }}</button>
+    </h1>
+</body>
+
+</html>
