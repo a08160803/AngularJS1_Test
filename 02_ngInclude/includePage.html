@@ -1,0 +1,6 @@
+<div ng-controller="childController" class="container">
+    第( {{ page }} / {{ totalPage }} )頁
+    <br>
+    <button type="button" class="btn btn-outline-primary" ng-click="previousPage()" ng-disabled="disabledPreviousButton">上一頁</button>
+    <button type="button" class="btn btn-outline-primary" ng-click="nextPage()" ng-disabled="disabledNextButton">下一頁</button>
+</div>

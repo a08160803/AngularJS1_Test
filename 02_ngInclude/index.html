@@ -7,21 +7,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="./index.js"></script>
-    <script src="./directive/myDirective.js"></script>
+    <script src="./includePage.js"></script>
 </head>
 
 <body ng-app="myApp">
-    <div ng-controller="myController" class="container">
-        <h1 style="color: red;">初始化名稱來自 myDirective1</h1>
-        <my-directive1></my-directive1>
-        <hr>
-        <h1 style="color: red;">呼叫 myDirective2 的方法，運用 control</h1>
-        <my-directive2 control="nameControl"></my-directive2>
+    <div ng-controller="parentController" class="container">
+        <h6 style="color: red;">不能直接將路徑寫在這，錯誤的範例 ng-include="./includePage.html"</h6>
+        <div ng-include="childUrl"></div>
 
-        <h1 ng-show="showName">controller Hello, {{ customerName }}</h1>
-
-        <button ng-click="changeName()" class="btn btn-warning">更換名字</button>
-        <button ng-click="showCustomerName()" class="btn btn-warning">{{ showItOrNot }}</button>
+        欄位1 : <input type="text" ng-focus="focusChangePage(1)">
+        欄位2 : <input type="text" ng-focus="focusChangePage(2)">
+        欄位3 : <input type="text" ng-focus="focusChangePage(3)">
+        欄位4 : <input type="text" ng-focus="focusChangePage(4)">
+        <br>
+        欄位5 : <input type="text" ng-focus="focusChangePage(5)">
+        欄位6 : <input type="text" ng-focus="focusChangePage(6)">
+        欄位7 : <input type="text" ng-focus="focusChangePage(7)">
+        欄位8 : <input type="text" ng-focus="focusChangePage(8)">
+        <br>
+        <h4>{{ errorMessage }}</h4>
     </div>
     <hr>
     <div class="container">

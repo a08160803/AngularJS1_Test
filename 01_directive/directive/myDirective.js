@@ -1,4 +1,4 @@
-myApp.directive("myDirective", function () {
+myApp.directive("myDirective1", function () {
     return {
         restrict: 'EA',
         template: '<h1 ng-show="showName">directive Hello, {{ customerName }}</h1>',
