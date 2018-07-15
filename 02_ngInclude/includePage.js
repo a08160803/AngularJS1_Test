@@ -2,7 +2,7 @@ myApp.controller('childController', ['$scope', function ($scope) {
 
     $scope.init = function () {
         $scope.page = 1;
-        $scope.totalPage = 3;
+        $scope.totalPage = 7;
     }
     $scope.init();
 
@@ -38,6 +38,8 @@ myApp.controller('childController', ['$scope', function ($scope) {
         } else {
             console.log("缺少頁數 : " + formParentData);
             // 要把錯誤訊息傳給parent
+            // $scope.$parent.errorMessage = '缺少頁數 : ' + formParentData;
+            $scope.message.errorMessage = '缺少頁數 : ' + formParentData;
         }
         $scope.checkButtonDisabled();
     });

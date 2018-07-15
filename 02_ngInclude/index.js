@@ -5,12 +5,13 @@ myApp.controller('parentController', ['$scope', function ($scope) {
     $scope.childUrl = "./includePage.html";
 
     $scope.init = function(){
-        $scope.errorMessage = '';
+        $scope.message = {};
+        $scope.message.errorMessage = '';
     }
     $scope.init();
 
     $scope.focusChangePage = function (page) {
-        $scope.errorMessage = '';
+        $scope.message.errorMessage = '';
         $scope.$broadcast('childFocusChangePage', page);
     }
 
